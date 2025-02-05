@@ -43,6 +43,19 @@
         .profiles a:hover i {
             color: #666;  /* Darken icon on hover */
         }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #282828;
+                color: #F8F8F8;
+            }
+            a {
+                color: #F8F8F8;
+            }
+            .profiles a:hover i {
+                color: #999;  /* Lighter hover color for dark mode */
+            }
+        }
     </style>
 </head>
 <body>
