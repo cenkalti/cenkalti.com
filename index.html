@@ -3,6 +3,7 @@
     <head>
     <meta charset="utf-8" />
     <title>Cenk Altı's Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style type="text/css">
         body {
             background-color: #F8F8F8;
@@ -27,16 +28,20 @@
             font-family: Helvetica, sans-serif;
         }
         .profiles {
-            margin-left:auto;
-            margin-right:auto;
-            font-family: Helvetica, sans-serif;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
         }
-        .profiles tr td:first-child {
-            font-family: Helvetica, sans-serif;
-            font-weight: bold;
+        .profiles a {
+            text-decoration: none;
+            font-size: 24px;  /* Make icons bigger */
         }
-        .profiles tr td:first-child:after {
-            content: ":";
+        .profiles i {
+            transition: color 0.2s ease;  /* Smooth color transition on hover */
+        }
+        .profiles a:hover i {
+            color: #666;  /* Darken icon on hover */
         }
     </style>
 </head>
@@ -46,47 +51,15 @@
         <p>I solve problems &mdash; occasionally a computer is involved.</p>
     </div>
 
-    <table class="profiles">
-        <tr>
-            <td>Resume</td>
-            <td>
-                <a href="https://github.com/cenkalti/resume">https://github.com/cenkalti/resume</a>
-            </td>
-        </tr>
-        <tr>
-            <td>E-mail</td>
-            <td>
-                <script type="text/javascript">
-                    <!--
-                    emailE='alti.email'
-                    emailE=('cenk' + '@' + emailE)
-                    document.write('<a href="mailto:' + emailE + '">' + emailE + '</a>')
-                    //-->
-                </script>
-                <noscript>
-                    cenk at alti dot email
-                </noscript>
-            </td>
-        </tr>
-        <tr>
-            <td>Instagram</td>
-            <td>
-                <a href="https://www.instagram.com/cenkalti">https://www.instagram.com/cenkalti</a>
-            </td>
-        </tr>
-        <tr>
-            <td>GitHub</td>
-            <td>
-                <a href="https://github.com/cenkalti">https://github.com/cenkalti</a>
-            </td>
-        </tr>
-        <tr>
-            <td>LinkedIn</td>
-            <td>
-                <a href="https://linkedin.com/in/cenkalti">https://linkedin.com/in/cenkalti</a>
-            </td>
-        </tr>
-    </table>
+    <div class="profiles">
+        <script type="text/javascript">
+            emailE='alti.email'
+            emailE=('cenk' + '@' + emailE)
+            document.write('<a href="mailto:' + emailE + '" title="Email"><i class="fa-solid fa-envelope"></i></a>')
+        </script>
+        <a href="https://github.com/cenkalti" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/cenkalti" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
