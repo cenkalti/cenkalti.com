@@ -418,6 +418,32 @@ body {
     }
 }
 
+/* Footer Section */
+.footer {
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+}
+
+.footer a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+/* Show HTML version on screen, hide PDF version */
+.footer-link-pdf {
+    display: none;
+}
+
 /* Print Styles */
 @media print {
     body {
@@ -440,5 +466,14 @@ body {
 
     a {
         text-decoration: none;
+    }
+
+    /* Hide HTML version in print, show PDF version */
+    .footer-link-html {
+        display: none;
+    }
+
+    .footer-link-pdf {
+        display: block;
     }
 }
