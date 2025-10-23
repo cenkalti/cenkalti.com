@@ -21,13 +21,14 @@ const path = require("path");
   console.log("Generating PDF...");
   await page.pdf({
     path: "cenk-alti.pdf",
-    format: "A3",
+    format: "A4",
+    scale: 0.8,
     printBackground: true,
     margin: {
-      top: "12mm",
-      right: "12mm",
-      bottom: "12mm",
-      left: "12mm",
+      top: "6mm",
+      right: "6mm",
+      bottom: "6mm",
+      left: "6mm",
     },
   });
 
