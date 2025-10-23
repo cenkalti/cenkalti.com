@@ -1,0 +1,15 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "HTML Resume with PDF generation",
+  "main": "generate-pdf.js",
+  "scripts": {
+    "build": "node generate-pdf.js"
+  },
+  "keywords": ["resume", "pdf"],
+  "author": "Cenk Altı",
+  "license": "MIT",
+  "devDependencies": {
+    "puppeteer": "^24.0.0"
+  }
+}

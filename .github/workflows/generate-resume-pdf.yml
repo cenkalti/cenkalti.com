@@ -1,0 +1,51 @@
+name: Generate Resume PDF
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'resume/**'
+
+jobs:
+  generate-pdf:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: ./resume
+        run: npm install
+
+      - name: Generate PDF
+        working-directory: ./resume
+        run: npm run build
+
+      - name: Delete existing release if it exists
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view latest-resume &>/dev/null; then
+            echo "Deleting existing latest-resume release..."
+            gh release delete latest-resume --yes
+          else
+            echo "No existing latest-resume release found"
+          fi
+
+      - name: Create release and upload PDF
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create latest-resume \
+            --title "Latest Resume" \
+            --notes "Generated on $(date -u '+%Y-%m-%d %H:%M:%S UTC')" \
+            ./resume/cenk-alti.pdf
