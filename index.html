@@ -1,88 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
+  <head>
     <meta charset="utf-8" />
     <title>Cenk Altı's Home Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <style type="text/css">
+      body {
+        background-color: #f8f8f8;
+        color: #282828;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        flex-direction: column;
+      }
+      a {
+        color: #282828;
+      }
+      .name {
+        text-align: center;
+      }
+      .name h1 {
+        font-family: Georgia, serif;
+      }
+      .name p {
+        font-family: Helvetica, sans-serif;
+      }
+      .profiles {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .profiles a {
+        text-decoration: none;
+        font-size: 24px; /* Make icons bigger */
+      }
+      .profiles i {
+        transition: color 0.2s ease; /* Smooth color transition on hover */
+      }
+      .profiles a:hover i {
+        color: #666; /* Darken icon on hover */
+      }
+
+      @media (prefers-color-scheme: dark) {
         body {
-            background-color: #F8F8F8;
-            color: #282828;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            flex-direction: column;
+          background-color: #282828;
+          color: #f8f8f8;
         }
         a {
-            color: #282828;
-        }
-        .name {
-            text-align: center;
-        }
-        .name h1 {
-            font-family: Georgia, serif;
-        }
-        .name p {
-            font-family: Helvetica, sans-serif;
-        }
-        .profiles {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .profiles a {
-            text-decoration: none;
-            font-size: 24px;  /* Make icons bigger */
-        }
-        .profiles i {
-            transition: color 0.2s ease;  /* Smooth color transition on hover */
+          color: #f8f8f8;
         }
         .profiles a:hover i {
-            color: #666;  /* Darken icon on hover */
+          color: #999; /* Lighter hover color for dark mode */
         }
-
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #282828;
-                color: #F8F8F8;
-            }
-            a {
-                color: #F8F8F8;
-            }
-            .profiles a:hover i {
-                color: #999;  /* Lighter hover color for dark mode */
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="name">
-        <h1>Cenk Altı</h1>
-        <p>I solve problems &mdash; occasionally a computer is involved.</p>
+      <h1>Cenk Altı</h1>
+      <p>I solve problems &mdash; occasionally a computer is involved.</p>
     </div>
 
     <div class="profiles">
-        <script type="text/javascript">
-            emailE='alti.email'
-            emailE=('cenk' + '@' + emailE)
-            document.write('<a href="mailto:' + emailE + '" title="Email"><i class="fa-solid fa-envelope"></i></a>')
-        </script>
-        <a href="https://github.com/cenkalti" title="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://linkedin.com/in/cenkalti" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <script type="text/javascript">
+        emailE = "alti.email";
+        emailE = "cenk" + "@" + emailE;
+        document.write(
+          '<a href="mailto:' +
+            emailE +
+            '" title="Email"><i class="fa-solid fa-envelope"></i></a>',
+        );
+      </script>
+      <a href="https://github.com/cenkalti" title="GitHub"
+        ><i class="fa-brands fa-github"></i
+      ></a>
+      <a href="https://linkedin.com/in/cenkalti" title="LinkedIn"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
     </div>
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-1844099-2']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      _gaq.push(["_setAccount", "UA-1844099-2"]);
+      _gaq.push(["_trackPageview"]);
+      (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src =
+          ("https:" == document.location.protocol
+            ? "https://ssl"
+            : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ga, s);
       })();
     </script>
-</body>
+  </body>
 </html>
